@@ -157,6 +157,7 @@ class Google(LM):
         completions = []
         for i in range(n):
             response = self.request(prompt, **kwargs)
-            completions.append(response.candidates[0].content.parts[0].text)
+            import pdb; pdb.set_trace()
+            completions.append(response.parts[0].text)
 
         return completions
